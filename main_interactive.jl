@@ -1,4 +1,4 @@
-include("src/Diffusion.jl")
+import Diffusion
 
 import MPI
 using CUDA
