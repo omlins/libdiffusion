@@ -1,4 +1,4 @@
-import Diffusion
+import Diffusion  # Requires to do Pkg.activate(".) in the project's top level folder.
 
 import MPI
 using CUDA
