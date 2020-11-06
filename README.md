@@ -1,6 +1,6 @@
 # Proof of Concept: a C-callable GPU-enabled parallel 2-D heat diffusion solver written in Julia using CUDA,  MPI and graphics
 
-This is a Proof of Concept for writing dynamic libraries for C or other languages in Julia using CUDA, MPI and graphics. It extends [this Proof of Concept](https://github.com/simonbyrne/libcg) for serial applications by Dr. Simon Byrne (Caltech) and Dr. Viral Shah (Julia Computing Inc.) and reuses its shared library building framework to large parts. The building process relies on [PackageCompiler.jl].
+This is a Proof of Concept for writing dynamic libraries for C or other languages in Julia using CUDA, MPI and graphics. It extends [this Proof of Concept](https://github.com/simonbyrne/libcg) for serial applications by Dr. Simon Byrne (Caltech) and Dr. Viral B. Shah (Julia Computing Inc.) and reuses its shared library building framework to large parts. The building process relies on [PackageCompiler.jl].
 
 It enables to compile a GPU-enabled parallel 2-D heat diffusion solver ([src/Diffusion.jl](src/Diffusion.jl)) written in Julia using [CUDA.jl], [MPI.jl], [ImplicitGlobalGrid.jl] and  [Plots.jl] in order to create a shared library that is callable from C (`libdiffusion.so`). Furthermore, it permits to build a C application ([main.c](main.c)) which uses this library. The application shows in particular that
 - a GPU array allocated and initialized in the C code, and
