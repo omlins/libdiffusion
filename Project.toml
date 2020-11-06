@@ -1,0 +1,10 @@
+name = "Diffusion"
+uuid = "25b682f0-d12c-46be-9767-83a7e113f32f"
+authors = ["Samuel Omlin <samuel.omlin@cscs.ch>"]
+version = "0.1.0"
+
+[deps]
+CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
+ImplicitGlobalGrid = "4d7a3746-15be-11ea-1130-334b0c4f5fa0"
+MPI = "da04e1cc-30fd-572f-bb4f-1f8673147195"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
