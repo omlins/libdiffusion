@@ -32,7 +32,7 @@ Then, it can be run, e.g., using four GPUs as follows:
 ```bash
 JULIA_CUDA_USE_BINARYBUILDER=false srun -Cgpu -N4 -n4 main
 ```
-It successfully uses **CUDA-aware MPI leveraging Remote Direct Memory Access** when it is run as follows:
+It successfully uses **CUDA-aware MPI** leveraging Remote Direct Memory Access when it is run as follows:
 ```bash
 export MPICH_RDMA_ENABLED_CUDA=1
 export IGG_CUDAAWARE_MPI=1
@@ -51,7 +51,7 @@ The Makefile requires the user to always set the following environment variables
 
 `JULIA_MPICC` defines the MPI wrapper compiler used to compile and link the main application ([main.c](main.c)) and to build the [MPI.jl] package. `JULIA_MPIEXEC` and `JULIA_MPIEXEC_ARGS` define the MPI launcher and arguments used to invoke [PackageCompiler.jl] with the required MPI context when building the shared library (`libdiffusion.so`). `JULIA_MPIEXEC` and `JULIA_MPIEXEC_ARGS` are also environment variables for the build of the [MPI.jl] package.
 
-The Makefile automatically sets
+Furthermore, the Makefile automatically sets
 ```bash
 JULIA_MPI_BINARY=system
 ```

@@ -49,7 +49,7 @@ using Plots
             gather!(T_nohalo, T_v)                              # Gather the global temperature field on process 0.
             if (me==0)                                          # Visualize it on process 0.
                 println("Time step $it: maximum temperature is $(maximum(T_v))")
-                heatmap(T_v, aspect_ratio=1); frame(anim)
+                heatmap(T_v, title="Temperature at time step $it", aspect_ratio=1, xlims=(1,nx_v), ylims=(1,ny_v), clims=(0,amp_T)); frame(anim)
             end
         end
     end
