@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
   };
 
   // Copy the heat capacity field to GPU
-  cudaMalloc(&Cp_d, (size_t)nx*ny*sizeof(double));
+  cudaMalloc((void **)&Cp_d, (size_t)nx*ny*sizeof(double));
   cudaMemcpy(Cp_d, Cp, (size_t)nx*ny*sizeof(double), cudaMemcpyHostToDevice);
 
   // Simulate heat diffusion calling shared library created by compiling Julia code (Diffusion.jl)

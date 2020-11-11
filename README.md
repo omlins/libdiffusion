@@ -32,7 +32,7 @@ Then, it can be run, e.g., using four GPUs as follows:
 ```bash
 JULIA_CUDA_USE_BINARYBUILDER=false srun -Cgpu -N4 -n4 main
 ```
-It successfully uses **CUDA-aware MPI** leveraging Remote Direct Memory Access when it is run as follows:
+It successfully uses **CUDA-aware MPI** leveraging Remote Direct Memory Access (RDMA) when it is run as follows:
 ```bash
 export MPICH_RDMA_ENABLED_CUDA=1
 export IGG_CUDAAWARE_MPI=1
