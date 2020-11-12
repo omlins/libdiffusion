@@ -6,7 +6,7 @@ It enables to compile a GPU-enabled parallel 2-D heat diffusion solver ([src/Dif
 - a GPU array allocated and initialized in the C code, and
 - an MPI communicator created in the C code
 
-can be passed in a straightforward and portable manner to the Julia solver for usage. In addition, the application showcases the usage of graphics features producing a simple animated GIF as the following:
+can be passed in a straightforward and portable manner to the Julia solver for usage. Furthermore, the application supports CUDA-aware MPI leveraging Remote Direct Memory Access (RDMA). Finally, the application showcases the usage of graphics features producing a simple animated GIF as the following:
 
 ![produced GIF](diffusion2D.gif)
 
@@ -32,7 +32,7 @@ Then, it can be run, e.g., using four GPUs as follows:
 ```bash
 JULIA_CUDA_USE_BINARYBUILDER=false srun -Cgpu -N4 -n4 main
 ```
-It successfully uses **CUDA-aware MPI** leveraging Remote Direct Memory Access (RDMA) when it is run as follows:
+It successfully uses **CUDA-aware MPI** leveraging RDMA when it is run as follows:
 ```bash
 export MPICH_RDMA_ENABLED_CUDA=1
 export IGG_CUDAAWARE_MPI=1

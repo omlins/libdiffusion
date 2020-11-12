@@ -61,7 +61,6 @@ end
 
 Base.@ccallable function julia_diffusion(nx::Csize_t, ny::Csize_t, nt::Csize_t, lx::Cdouble, ly::Cdouble, lam::Cdouble, cp_min::Cdouble, amp_T::Cdouble, Cp_c::CuPtr{Cdouble}, comm_c::MPI.MPI_Comm)::Cint
     try
-        MPI.run_init_hooks()
         comm = MPI.Comm_dup(MPI.Comm(comm_c))
         Cp   = unsafe_wrap(CuArray, Cp_c, (Int64(nx), Int64(ny)))
         diffusion2D(nx, ny, nt, lx, ly, lam, cp_min, amp_T, Cp, comm)

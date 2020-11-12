@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
 
   // Create Cartesian process topology
   MPI_Init(&argc, &argv);
+  jl_eval_string("import MPI; MPI.run_init_hooks()");
   MPI_Comm_size(MPI_COMM_WORLD, &nprocs);
   MPI_Dims_create(nprocs, NDIMS, dims);
   MPI_Cart_create(MPI_COMM_WORLD, NDIMS, dims, periods, reorder, &comm);
