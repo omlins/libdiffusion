@@ -39,7 +39,7 @@ export IGG_CUDAAWARE_MPI=1
 JULIA_CUDA_USE_BINARYBUILDER=false srun -Cgpu -N4 -n4 main
 ```
 
-The repository contains two recorded demos: [the first](demos/build_and_run.mp4) shows a successful build of the application on Piz Daint and its execution on four GPUs; [the second](demos/run_cuda_aware_mpi.mp4) shows a subsequent execution of the application with CUDA-aware MPI activated and the inspection of the produced animated GIF.
+The repository contains a [recorded demo](demo/build_and_run.mp4) which shows a successful build of the application on Piz Daint and its execution on four GPUs using CUDA-aware MPI; the produced animated GIF is opened at the end of the demo.
 
 
 ## Building on other systems
@@ -58,6 +58,15 @@ JULIA_MPI_BINARY=system
 for building the [MPI.jl] package. Depending on the system and the MPI implementation, the user needs to set additional environment variables to enable a correct build of the [MPI.jl] package. Please refer to the [corresponding section in the documentation of MPI.jl](https://juliaparallel.github.io/MPI.jl/latest/configuration/#environment_variables).
 
 Finally, the user might need to set `CFLAGS` to include the CUDA include directory and `LDFLAGS` to link against the needed CUDA libraries (this is not needed on Piz Daint as there it is automatically handled by the Cray wrapper compiler).
+
+## Acknowledgements
+
+The author of this Proof of Concept, Dr. Samuel Omlin (Swiss National Supercomputing Centre, ETH Zurich), would like to thank the reviewers (c.f. #1) for their highly valuable contributions and comments on this GitHub repository and the very fruitful discussions in the Slack channel `#julia-backend`. The reviewers are listed here in alphabetical order:
+- Kristoffer Carlsson (Julia Computing Inc.)
+- Dr. Simon Byrne (Caltech)
+- Dr. Tim Besard (Julia Computing Inc.)
+- Valentin Churavy (MIT Julia Lab)
+- Dr. Viral B. Shah (Julia Computing Inc.)
 
 
 
