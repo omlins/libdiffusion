@@ -61,7 +61,7 @@ Finally, the user might need to set `CFLAGS` to include the CUDA include directo
 
 ## Acknowledgements
 
-The author of this Proof of Concept, Dr. Samuel Omlin (Swiss National Supercomputing Centre, ETH Zurich), would like to thank the reviewers (c.f. #1) for their highly valuable contributions and comments on this GitHub repository and the very fruitful discussions in the Slack channel `#julia-backend`. The reviewers are listed here in alphabetical order:
+The author of this Proof of Concept, Dr. Samuel Omlin (Swiss National Supercomputing Centre, ETH Zurich), would like to thank the reviewers (c.f. [#2](https://github.com/omlins/libdiffusion/pull/2)) for their highly valuable contributions and comments on this GitHub repository and the very fruitful discussions in the Slack channel `#julia-backend`. The reviewers are listed here in alphabetical order:
 - Kristoffer Carlsson (Julia Computing Inc.)
 - Dr. Simon Byrne (Caltech)
 - Dr. Tim Besard (Julia Computing Inc.)
